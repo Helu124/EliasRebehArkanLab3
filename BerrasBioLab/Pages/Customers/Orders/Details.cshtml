@@ -1,0 +1,37 @@
+﻿@page
+@model BerrasBioLab.Pages.Customers.Orders.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Order confirmation</h2>
+
+<p>Thank you for joining us!</p>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer.NrOfTickets)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Customer.NrOfTickets)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="/Showcases/FrontPage/Index" a class="btn btn-primary mt-1">Confirm</a>
+</div>
